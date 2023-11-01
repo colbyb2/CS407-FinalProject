@@ -6,13 +6,136 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/logInNavButton"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="#B11B1B"
+        android:text="Log In"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTextLabel" />
+
+    <EditText
+        android:id="@+id/signUpConfirmPasswordTextField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordLabel" />
+
     <TextView
+        android:id="@+id/confirmPasswordLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:text="Confirm Password:"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpConfirmPasswordTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpConfirmPasswordTextField"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPasswordTextField" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Password:"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpPasswordTextField"
+        app:layout_constraintTop_toBottomOf="@+id/signUpEmailTextField" />
+
+    <TextView
+        android:id="@+id/badgerBeatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="108dp"
+        android:background="#B11B1B"
+        android:padding="10dp"
+        android:text="BadgerBeat"
+        android:textColor="#FFFFFF"
+        android:textSize="52sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Email:"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpEmailTextField" />
+
+    <EditText
+        android:id="@+id/signUpEmailTextField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="email@website.com"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badgerBeatTitle" />
+
+    <EditText
+        android:id="@+id/signUpPasswordTextField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPasswordLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#B11B1B"
+        android:text="Sign Up"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/orTextLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpConfirmPasswordTextField" />
+
+    <TextView
+        android:id="@+id/orTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="Or"
+        app:layout_constraintBottom_toTopOf="@+id/logInNavButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
