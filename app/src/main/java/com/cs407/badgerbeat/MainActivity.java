@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
     */
     private void signUserUp() {
         //Sign Up
+        //Navigate to Home
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 
     /*
