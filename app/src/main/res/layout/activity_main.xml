@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/orTextLabel" />
 
     <EditText
-        android:id="@+id/confirmPasswordTextField"
+        android:id="@+id/signUpConfirmPasswordTextField"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="60dp"
@@ -42,9 +42,9 @@
         android:layout_marginBottom="10dp"
         android:text="Confirm Password:"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPasswordTextField"
-        app:layout_constraintStart_toStartOf="@+id/confirmPasswordTextField"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextField" />
+        app:layout_constraintBottom_toTopOf="@+id/signUpConfirmPasswordTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpConfirmPasswordTextField"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPasswordTextField" />
 
     <TextView
         android:id="@+id/passwordLabel"
@@ -53,9 +53,9 @@
         android:layout_marginBottom="5dp"
         android:text="Password:"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/passwordTextField"
-        app:layout_constraintStart_toStartOf="@+id/passwordTextField"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextField" />
+        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpPasswordTextField"
+        app:layout_constraintTop_toBottomOf="@+id/signUpEmailTextField" />
 
     <TextView
         android:id="@+id/badgerBeatTitle"
@@ -68,7 +68,7 @@
         android:text="BadgerBeat"
         android:textColor="#FFFFFF"
         android:textSize="52sp"
-        app:layout_constraintBottom_toTopOf="@+id/emailTextField"
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,11 +80,11 @@
         android:layout_marginBottom="5dp"
         android:text="Email:"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/emailTextField"
-        app:layout_constraintStart_toStartOf="@+id/emailTextField" />
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailTextField"
+        app:layout_constraintStart_toStartOf="@+id/signUpEmailTextField" />
 
     <EditText
-        android:id="@+id/emailTextField"
+        android:id="@+id/signUpEmailTextField"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="59dp"
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/badgerBeatTitle" />
 
     <EditText
-        android:id="@+id/passwordTextField"
+        android:id="@+id/signUpPasswordTextField"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="59dp"
@@ -126,7 +126,7 @@
         app:layout_constraintBottom_toTopOf="@+id/orTextLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpConfirmPasswordTextField" />
 
     <TextView
         android:id="@+id/orTextLabel"
