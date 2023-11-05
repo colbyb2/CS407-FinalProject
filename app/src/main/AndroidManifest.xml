@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BadgerBeat"
         tools:targetApi="31">
         <activity
+            android:name=".TrumpetActivity"
+            android:exported="false" />
+        <activity
             android:name=".DrumsActivity"
             android:exported="false" />
         <activity
