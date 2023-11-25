@@ -51,7 +51,7 @@
 
     <ImageView
         android:id="@+id/settingsImage"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="16dp"
@@ -60,6 +60,7 @@
         android:foregroundTint="#2196F3"
         app:layout_constraintBottom_toTopOf="@+id/badgerBeatTitle3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoutButton"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
@@ -75,6 +76,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trumpetButton" />
+        app:layout_constraintTop_toBottomOf="@+id/logoutButton" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="547dp"
+        android:backgroundTint="#B11B1B"
+        android:text="Logout"
+        app:layout_constraintBottom_toTopOf="@+id/findMusiciansButton"
+        app:layout_constraintEnd_toStartOf="@+id/settingsImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

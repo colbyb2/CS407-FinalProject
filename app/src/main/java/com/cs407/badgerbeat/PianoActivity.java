@@ -29,7 +29,6 @@ public class PianoActivity extends AppCompatActivity {
     }
 
     private void toHome() { //Returns to home page
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
+        finish(); //Use finish to go back instead. Pops it off the intent stack.
     }
 }
