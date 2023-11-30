@@ -11,6 +11,7 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
     private Button pianoButton;
     private Button trumpetButton;
+    private Button logoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         //Get Buttons
         pianoButton = findViewById(R.id.pianoButton);
         trumpetButton = findViewById(R.id.trumpetButton);
+        logoutButton = findViewById(R.id.logoutButton);
 
         pianoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 toTrumpet();
+            }
+        });
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AuthenticationHandler.instance.signUserOut();
+                finish();
             }
         });
     }
