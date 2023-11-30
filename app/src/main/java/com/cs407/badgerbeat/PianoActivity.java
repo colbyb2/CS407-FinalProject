@@ -18,7 +18,7 @@ public class PianoActivity extends AppCompatActivity {
         //Sets buttons
         backButton = findViewById(R.id.backButton);
         //Sets Media PLayer
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.key01);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.f2);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
