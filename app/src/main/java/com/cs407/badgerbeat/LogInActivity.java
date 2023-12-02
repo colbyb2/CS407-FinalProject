@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseUser;
 
@@ -64,6 +65,7 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onError(String errorMessage) {
                 //Display Error
+                Toast.makeText(LogInActivity.this, errorMessage,Toast.LENGTH_LONG).show();
             }
         });
     }
