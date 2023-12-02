@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseUser;
 
@@ -74,11 +75,13 @@ public class MainActivity extends AppCompatActivity {
         String password = passwordTextField.getText().toString();
         String confirmPass = confirmPassTextField.getText().toString();
 
-//        if (email.isEmpty() || password.isEmpty()) {
-//            return;
-//        } else if (password != confirmPass) {
-//            return;
-//        }
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(MainActivity.this, "Please enter email and password.",Toast.LENGTH_LONG).show();
+            return;
+        } else if (!password.equals(confirmPass)) {
+            Toast.makeText(MainActivity.this, "Passwords do not match.",Toast.LENGTH_LONG).show();
+            return;
+        }
         AuthenticationHandler.instance.createUser(email, password, new CreateUserCallback() {
             @Override
             public void onComplete(FirebaseUser user) {
@@ -89,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(String errorMessage) {
                 //Display Errors
+                Toast.makeText(MainActivity.this, errorMessage,Toast.LENGTH_LONG).show();
             }
         });
     }
