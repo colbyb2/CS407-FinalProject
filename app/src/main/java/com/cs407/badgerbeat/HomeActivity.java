@@ -12,6 +12,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button pianoButton;
     private Button trumpetButton;
     private Button logoutButton;
+    private Button findMusiciansButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         pianoButton = findViewById(R.id.pianoButton);
         trumpetButton = findViewById(R.id.trumpetButton);
         logoutButton = findViewById(R.id.logoutButton);
+        findMusiciansButton = findViewById(R.id.findMusiciansButton);
 
         pianoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,13 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        findMusiciansButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toMap();
+            }
+        });
     }
 
     private void toPiano() {
@@ -53,6 +62,11 @@ public class HomeActivity extends AppCompatActivity {
 
     private void toTrumpet() {
         Intent intent = new Intent(this, TrumpetActivity.class);
+        startActivity(intent);
+    }
+
+    private void toMap() {
+        Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
     }
 }
