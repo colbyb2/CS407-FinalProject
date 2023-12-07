@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".TrumpetActivity">
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="120dp"
+        android:text="Back"
+        app:layout_constraintBottom_toTopOf="@+id/valve1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/valve1"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/valve2"
+        app:layout_constraintEnd_toEndOf="@+id/valve2"
+        app:layout_constraintStart_toStartOf="@+id/valve2"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <Button
+        android:id="@+id/valve2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/valve3"
+        app:layout_constraintEnd_toEndOf="@+id/valve3"
+        app:layout_constraintStart_toStartOf="@+id/valve3"
+        app:layout_constraintTop_toBottomOf="@+id/valve1" />
+
+    <Button
+        android:id="@+id/valve3"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="231dp"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valve2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
