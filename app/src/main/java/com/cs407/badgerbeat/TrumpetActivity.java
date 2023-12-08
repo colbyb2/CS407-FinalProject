@@ -43,6 +43,9 @@ public class TrumpetActivity extends AppCompatActivity {
         valve2 = findViewById(R.id.valve2);
         valve3 = findViewById(R.id.valve3);
 
+        // initialize 'notes'
+        notes = new int[31];
+
         // load trumpet tones into 'notes'
         // value of -1 indicates no audio file present
         notes[0] = -1;
