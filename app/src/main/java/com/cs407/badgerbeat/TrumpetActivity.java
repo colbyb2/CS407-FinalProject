@@ -18,17 +18,16 @@ public class TrumpetActivity extends AppCompatActivity {
     private Button valve1, valve2, valve3;
     // represents whether the valve buttons are being held down
     private boolean[] valves = {false, false, false};
-    // TODO: create an array for notes, with F = 13, Bb = 6, Low E = 0 (each value corresponds to a semitone)
     // stores int values when sounds are loaded
     private int[] notes;
     // represents the current semitone (middle F = 13, Low E = 0)
     // Low F# is lowest standard tone on trumpet
     private int currentBugleTone = 13;
     private int currentNote;
-    // TODO: play the correct note for the valves held down
     // SoundPool object that plays sounds
     private SoundPool pool;
-    // TODO: implement more bugle tones
+    // TODO: implement more bugle tones using radio buttons
+    private final int[] bugleTones = {22, 18, 13, 6};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
