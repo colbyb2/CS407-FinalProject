@@ -30,7 +30,7 @@
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/valve2"
         app:layout_constraintEnd_toEndOf="@+id/valve2"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toStartOf="@+id/bugleGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/valve2" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/bugleGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

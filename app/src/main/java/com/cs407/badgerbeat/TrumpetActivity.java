@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class TrumpetActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class TrumpetActivity extends AppCompatActivity {
     private Button backButton;
     // store references for each button. Each button represents a trumpet valve
     private Button valve1, valve2, valve3;
+    private RadioGroup bugleGroup;
     private RadioButton bugle0, bugle1, bugle2, bugle3;
     // represents whether the valve buttons are being held down
     private boolean[] valves = {false, false, false};
@@ -44,7 +46,8 @@ public class TrumpetActivity extends AppCompatActivity {
         valve2 = findViewById(R.id.valve2);
         valve3 = findViewById(R.id.valve3);
 
-        // set bugle tones
+        // set bugle tone buttons
+        bugleGroup = findViewById(R.id.bugleGroup);
         bugle0 = findViewById(R.id.bugle0);
         bugle1 = findViewById(R.id.bugle1);
         bugle2 = findViewById(R.id.bugle2);
@@ -88,17 +91,20 @@ public class TrumpetActivity extends AppCompatActivity {
         notes[30] = pool.load(this, R.raw.t30, 1);
 
         // detect which bugle tone is set
-        bugle0.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Log.i("Trumpet", "bugle0: " + isChecked);
-        });
-        bugle1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Log.i("Trumpet", "bugle1: " + isChecked);
-        });
-        bugle2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Log.i("Trumpet", "bugle2: " + isChecked);
-        });
-        bugle3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Log.i("Trumpet", "bugle3: " + isChecked);
+        bugleGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (bugle0.isChecked()){
+                    currentBugleTone = bugleTones[0];
+                } else if (bugle1.isChecked()){
+                    currentBugleTone = bugleTones[1];
+                } else if (bugle2.isChecked()){
+                    currentBugleTone = bugleTones[2];
+                } else if (bugle3.isChecked()){
+                    currentBugleTone = bugleTones[3];
+                }
+                playNote();
+            }
         });
 
         // detect when the buttons (valves) are pressed down
@@ -217,6 +223,8 @@ public class TrumpetActivity extends AppCompatActivity {
         Log.i("Trumpet", "Current semitone: " + currentNote);
         if (notes[currentNote] != -1){
             pool.play(notes[currentNote], 1, 1, 0, 0, 1);
+        } else{
+            pool.autoPause();
         }
     }
 
