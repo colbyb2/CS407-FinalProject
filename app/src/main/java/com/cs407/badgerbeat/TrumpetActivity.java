@@ -52,6 +52,7 @@ public class TrumpetActivity extends AppCompatActivity {
         bugle1 = findViewById(R.id.bugle1);
         bugle2 = findViewById(R.id.bugle2);
         bugle3 = findViewById(R.id.bugle3);
+        bugle1.toggle();
 
         // initialize 'notes'
         notes = new int[31];
