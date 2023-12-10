@@ -64,32 +64,31 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="11dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/valve1"
         app:layout_constraintTop_toTopOf="@+id/valve1">
 
         <RadioButton
-            android:id="@+id/radioT22"
+            android:id="@+id/bugle3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="C"
             android:textSize="32dp" />
 
         <RadioButton
-            android:id="@+id/radioT18"
+            android:id="@+id/bugle2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bb"
             android:textSize="32dp" />
 
         <RadioButton
-            android:id="@+id/radioT13"
+            android:id="@+id/bugle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="F"
             android:textSize="32dp" />
 
         <RadioButton
-            android:id="@+id/radioT6"
+            android:id="@+id/bugle0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bb"

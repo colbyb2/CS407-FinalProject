@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 public class TrumpetActivity extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class TrumpetActivity extends AppCompatActivity {
     private Button backButton;
     // store references for each button. Each button represents a trumpet valve
     private Button valve1, valve2, valve3;
+    private RadioButton bugle0, bugle1, bugle2, bugle3;
     // represents whether the valve buttons are being held down
     private boolean[] valves = {false, false, false};
     // stores int values when sounds are loaded
@@ -27,7 +29,7 @@ public class TrumpetActivity extends AppCompatActivity {
     // SoundPool object that plays sounds
     private SoundPool pool;
     // TODO: implement more bugle tones using radio buttons
-    private final int[] bugleTones = {22, 18, 13, 6};
+    private final int[] bugleTones = {6, 13, 18, 22};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,12 @@ public class TrumpetActivity extends AppCompatActivity {
         valve1 = findViewById(R.id.valve1);
         valve2 = findViewById(R.id.valve2);
         valve3 = findViewById(R.id.valve3);
+
+        // set bugle tones
+        bugle0 = findViewById(R.id.bugle0);
+        bugle1 = findViewById(R.id.bugle1);
+        bugle2 = findViewById(R.id.bugle2);
+        bugle3 = findViewById(R.id.bugle3);
 
         // initialize 'notes'
         notes = new int[31];
@@ -78,6 +86,20 @@ public class TrumpetActivity extends AppCompatActivity {
         notes[28] = pool.load(this, R.raw.t28, 1);
         notes[29] = pool.load(this, R.raw.t29, 1);
         notes[30] = pool.load(this, R.raw.t30, 1);
+
+        // detect which bugle tone is set
+        bugle0.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Log.i("Trumpet", "bugle0: " + isChecked);
+        });
+        bugle1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Log.i("Trumpet", "bugle1: " + isChecked);
+        });
+        bugle2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Log.i("Trumpet", "bugle2: " + isChecked);
+        });
+        bugle3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Log.i("Trumpet", "bugle3: " + isChecked);
+        });
 
         // detect when the buttons (valves) are pressed down
         valve1.setOnTouchListener(new View.OnTouchListener() {
